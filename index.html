@@ -1,53 +1,140 @@
-<!DOCTYPE html>
 <html>
+	<head>
+		<title>
+			Responsive Design Example
+		</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="main">
+			<nav>
+				 <a href="#" id="menuIcon">Ξ</a>  
+				<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Articles</a>
+					</li>
+					<li>
+						<a href="#">Gallery</a>
+					</li>
+					<li>
+						<a href="#">Forum</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+				</ul>
+			</nav>
+			<aside>
+				<ul>
+					<li><a href="#subtitle1">item1</a> </li>
+					<li><a href="#subtitle2">item2</a></li>
+					<li><a href="#subtitle3">item3</a></li>
+					<li><a href="#subtitle4">item4</a></li>
+					<li><a href="#subtitle5">item5</a></li>
+				</ul>
+			</aside>
+			<section class="post">
+				<article>
+					<h1>
+						Sample Title
+					</h1>
+					<p id="subtitle1"><strong>subtitle1</strong></p>
+					<p>
+						Video provides a powerful way to help you prove your point. When you click Online
+						Video, you can paste in the embed code for the video you want to add. You can also
+						type a keyword to search online for the video that best fits your document. To make
+						your document look professionally produced, Word provides header, footer, cover page,
+						and text box designs that complement each other. For example, you can add a matching
+						cover page, header, and sidebar. Click Insert and then choose the elements you want
+						from the different galleries. Themes and styles also help keep your document coordinated.
+						When you click Design and choose a new Theme, the pictures, charts, and SmartArt
+						graphics change to match your new theme. When you apply styles, your headings change
+						to match the new theme. Save time in Word with new buttons that show up where you
+						need them.
+					</p>
+					<p id="subtitle2"><strong>subtitle2</strong></p>
+					<section class="grid">
+						<div class="item">
+							#1
+						</div>
+						<div class="item">
+							#2
+						</div>
+						<div class="item">
+							#3
+						</div>
+					</section>
+					<p>
+					<p id="subtitle3"><strong>subtitle3</strong></p>
+						To change the way a picture fits in your document, click it and a button for layout
+						options appears next to it. When you work on a table, click where you want to add
+						a row or a column, and then click the plus sign. Reading is easier, too, in the new
+						Reading view. You can collapse parts of the document and focus on the text you want.
+						If you need to stop reading before you reach the end, Word remembers where you left
+						off - even on another device. Video provides a powerful way to help you prove your
+						point. When you click Online Video, you can paste in the embed code for the video
+						you want to add. You can also type a keyword to search online for the video that
+						best fits your document. To make your document look professionally produced, Word
+						provides header, footer, cover page, and text box designs that complement each other.
+						For example, you can add a matching cover page, header, and sidebar.
+					</p>
+					<p id="subtitle4"><strong>subtitle4</strong></p>
+					<img class="illustration" src="beauty.png" title="sample pic" alt="beauty"/>
+					<p id="subtitle5"><strong>subtitle5</strong></p>
+					<p>
+						Click Insert and then choose the elements you want from the different galleries.
+						Themes and styles also help keep your document coordinated. When you click Design
+						and choose a new Theme, the pictures, charts, and SmartArt graphics change to match
+						your new theme. When you apply styles, your headings change to match the new theme.
+						Save time in Word with new buttons that show up where you need them. To change the
+						way a picture fits in your document, click it and a button for layout options appears
+						next to it. When you work on a table, click where you want to add a row or a column,
+						and then click the plus sign. Reading is easier, too, in the new Reading view. You
+						can collapse parts of the document and focus on the text you want. If you need to
+						stop reading before you reach the end, Word remembers where you left off - even on
+						another device.
+					</p>
+				</article>
+			</section>
+			<footer>
+				<hr>
+				<ul>
+					<li><small>Wayou &copy 2013|</small></li>
+					<li><small><a href="mailto:sample@somesite.com">Contact</a></small> </li>
+				</ul>
+			</footer>
+		</div>
+        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" ></script>
+		<script type="text/javascript">
+		$(function(){
+			$("#menuIcon,nav ul li").click(function(){
+				if ($("#menuIcon").is(":visible")) {
+				$("nav ul").toggle(300);
+				};
+			});
+			$( window ).resize(function() {
+				if (!$("nav ul").is(":visible")) {
+					$('nav ul').attr('style', function(i, style)
+						{
+						    return style.replace(/display[^;]+;?/g, '');
+						});
+				};
+			});
+		})
+		</script>
+		 <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-46794744-6', 'wayou.github.io');
+        ga('send', 'pageview');
+        </script>
+	</body>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Responsive web design example : An example page of responsive web design" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Responsive web design example</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Wayou/Responsive_Web_Design_Example">View on GitHub</a>
-
-          <h1 id="project_title">Responsive web design example</h1>
-          <h2 id="project_tagline">An example page of responsive web design</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Wayou/Responsive_Web_Design_Example/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Wayou/Responsive_Web_Design_Example/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="responsive_web_design_example" class="anchor" href="#responsive_web_design_example"><span class="octicon octicon-link"></span></a>Responsive_Web_Design_Example</h1>
-
-<p>An example page of responsive web design, more details see my blog.
-<a href="http://www.cnblogs.com/Wayou/p/responsive_design_step_by_step.html">http://www.cnblogs.com/Wayou/p/responsive_design_step_by_step.html</a></p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Responsive web design example maintained by <a href="https://github.com/Wayou">Wayou</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
 </html>
